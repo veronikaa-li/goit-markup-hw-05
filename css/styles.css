@@ -97,11 +97,16 @@ address {
 .header-nav {
   display: flex;
   align-items: center;
+  
 }
 .nav-list {
+  position: relative;
   display: flex;
   margin: 0;
   padding: 0;
+  bottom: 0;
+  
+ 
 }
 
 .contact-list {
@@ -112,6 +117,7 @@ address {
 
 .header-nav-iteam:not(:last-child) {
   margin-right: 50px;
+
 }
 
 .header-nav-link {
@@ -134,6 +140,29 @@ address {
   color: var(--button-color);
 }
 
+.header-nav-link.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--button-color);
+  border-radius: 2px
+}
+/* .current::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--button-color);
+border-radius: 2px;
+
+} */
 .header-link {
   display: flex;
   align-items: center;
@@ -146,6 +175,11 @@ address {
   color: var(--title-text-color);
 }
 
+.header-link.current {
+  color: var(--button-color)
+}
+
+.header-link
 .contacts-icon {
   margin-right: 10px;
   fill: currentColor;
