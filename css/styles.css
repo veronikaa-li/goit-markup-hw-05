@@ -97,13 +97,12 @@ address {
 .header-nav {
   display: flex;
   align-items: center;
-  
 }
 .nav-list {
   display: flex;
   margin: 0;
   padding: 0;
-  bottom: 0; 
+  bottom: 0;
 }
 
 .contact-list {
@@ -114,7 +113,6 @@ address {
 
 .header-nav-iteam:not(:last-child) {
   margin-right: 50px;
-
 }
 
 .header-nav-iteam {
@@ -141,9 +139,6 @@ address {
   color: var(--button-color);
 }
 
-
-  
-
 /* .current::after {
   content: '';
   position: absolute;
@@ -169,7 +164,7 @@ address {
 }
 
 .header-link.current {
-  color: var(--button-color)
+  color: var(--button-color);
 }
 
 .header-nav-link.link.current::after {
@@ -184,10 +179,7 @@ address {
   border-radius: 2px;
 }
 
-
-
-.header-link
-.contacts-icon {
+.header-link .contacts-icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -319,17 +311,17 @@ address {
 }
 
 .wrapper {
-position: relative;
+  position: relative;
 }
 
 .wrapper-box {
   position: absolute;
   left: calc(50% - 185px);
   bottom: 0;
-width: 100%;
+  width: 100%;
 
-height: 70px;
-background: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 .wrapper-text {
@@ -429,7 +421,6 @@ background: rgba(47, 48, 58, 0.8);
 /* Clients */
 
 .clients {
-
   padding: 94px 0;
 }
 .clients-list {
@@ -543,13 +534,14 @@ background: rgba(47, 48, 58, 0.8);
 
 .backdrope {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
 
   width: 100%;
-  height: 100%;
+  height: 1024px;
 
-  background-color: rgba(0, 0, 0, 0.2);;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 150ms linear, visibility 150ms;
 }
 
 .backdrope.is-hidden {
@@ -557,6 +549,7 @@ background: rgba(47, 48, 58, 0.8);
   visibility: hidden;
   pointer-events: none;
 }
+
 .modal {
   display: block;
   position: absolute;
@@ -564,8 +557,8 @@ background: rgba(47, 48, 58, 0.8);
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 528px;
-  min-height: 581px;
-  background-color: #FFFFFF;
+  height: 581px;
+  background-color: #ffffff;
   border-radius: 4px;
 }
 
@@ -632,6 +625,39 @@ background: rgba(47, 48, 58, 0.8);
   flex-basis: calc((100%-30px * 2) / 9);
 }
 
+.work-thumb {
+  position: relative;
+  overflow: hidden;
+  outline-offset: -2px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(101%);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.overlay-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.work-wrapper:hover .overlay,
+.work-wrapper:focus .overlay {
+  transform: translateY(0);
+}
 .title-wrapper {
   padding: 24px 20px;
   border: 1px solid #eeeeee;
