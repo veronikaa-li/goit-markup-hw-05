@@ -58,17 +58,21 @@ address {
   padding: 0 15px;
 }
 
+.btn {
+  border: 1px, solid transparent;
+  display: inline-block;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .btn:hover,
 .btn:focus {
   background-color: var(--button-color);
   color: var(--accent-color);
 }
 
-.btn {
-  border: 1px, solid transparent;
-  display: inline-block;
-  cursor: pointer;
-}
+
 
 /* HEADER */
 
@@ -128,6 +132,8 @@ address {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -167,7 +173,7 @@ address {
   color: var(--button-color);
 }
 
-.header-nav-link.link.current::after {
+.header-nav-link.current::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -177,7 +183,10 @@ address {
   height: 4px;
   background: var(--button-color);
   border-radius: 2px;
+
 }
+
+
 
 .header-link .contacts-icon {
   margin-right: 10px;
@@ -407,6 +416,8 @@ address {
   color: var(--border-color);
 
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -440,7 +451,10 @@ address {
 
   border: 1px solid var(--border-color);
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--button-color);
@@ -522,6 +536,8 @@ address {
   color: var(--accent-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socials-link:hover,
@@ -607,6 +623,8 @@ address {
   color: var(--primary-text-color);
   background: var(--icon-background-color);
   border: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .second-btn:hover,
@@ -684,6 +702,8 @@ address {
 
 .work-project {
   display: block;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-project:hover,
